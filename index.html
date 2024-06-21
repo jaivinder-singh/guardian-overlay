@@ -293,10 +293,10 @@
 	    console.log("Event received: " + JSON.stringify(e.data));
 	    if (e.data.action == "requestPage"){
 		 console.log("inside the recieve if message")
-	        
+	         sendMessage({actionType: 'ameliaConversationAttributes', actionData: {"pageReferrer": "testing"}});
 			sendMessage({actionType: "resumeConversation", actionData: { completionCauseCode: "000", messageText: "" },
         });
-		    sendMessage({actionType: 'ameliaConversationAttributes', actionData: {"pageReferrer": "testing"}});
+		   
 	    }
    }
 
